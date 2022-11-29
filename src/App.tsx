@@ -7,10 +7,10 @@ import { Home } from "./paginas/home/home";
 
 function App() {
   return (
-    <Router>  // Orquestrador - que monta a página que o usuário irá utilizar
+    <Router>
       <Navbar />
-      <Routes>  // Lista de rotas da aplicação
-        <Route path='/' element={<Home />} /> // Rota
+      <Routes>
+        <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
       </Routes>
