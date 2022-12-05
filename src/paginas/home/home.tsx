@@ -1,8 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import './Home.css';
 
 function Home(){
-    const [num, setNum] = useState(0); 
+    const [num, setNum] = useState(0);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        document.title = `Clicou ${num} vezes`
+
+        if (num > 10) {
+            navigate('/about');
+        }
+
+        return () => {
+            
+        }
+    }, [num]);
 
     return (
         <>
